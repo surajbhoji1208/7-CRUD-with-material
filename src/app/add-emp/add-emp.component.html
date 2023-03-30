@@ -1,0 +1,36 @@
+<form [formGroup]="formValue">
+  <div id="empno">
+    <mat-form-field appearance="fill">
+      <mat-label>Emp No</mat-label>
+      <input matInput formControlName="empno">
+    </mat-form-field>
+  </div>
+  <div id="name">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="name">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="example-container" id="email">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="email" required>
+      <div *ngIf="formValue.controls['email'].errors && formValue.controls['email'].touched">
+        <mat-error *ngIf="email?.hasError('required')">email is required</mat-error>
+      </div>
+    </mat-form-field>
+  </div>
+  <div id="salary">
+    <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Salary</mat-label>
+      <input matInput type="number" class="example-right-align" placeholder="0" formControlName="salary">
+      <span matTextPrefix>₹ &nbsp;</span>
+      <span matTextSuffix>.00</span>
+    </mat-form-field>
+  </div>
+  <div class="btn">
+    <button  (click)=" addEmp()">Add Employee</button>
+  </div>
+</form>

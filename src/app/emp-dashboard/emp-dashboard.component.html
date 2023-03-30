@@ -1,0 +1,56 @@
+<!-- nav start -->
+<div class="nav">
+  <h1>CRUD</h1>
+  <div class="btn">
+    <button id="btnNav" mat-button (click)="openDialog()">Open dialog</button>
+  </div>
+</div>
+<!-- nav end -->
+
+<!-- table start -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="empno">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.empno}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="salary">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.salary}} 
+      <div class="tbtn">
+      <button (click)="updateEmp(element)">Update</button>
+      <button (click)="deleteEmp(element.id)">Delete</button>
+      <button (click)="viewEmp(element)">View</button>
+      </div>
+    </td>
+  
+  </ng-container>
+  
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+
+
+
+<!-- table end -->

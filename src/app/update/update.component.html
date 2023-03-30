@@ -1,0 +1,23 @@
+<form  [formGroup]="updateForm">
+    <div class="mb-1" >
+        <label for="exampleInputId" class="form-label">EMP NO</label>
+        <input type="number" class="form-control" id="exampleInputNumber" placeholder="{{data.empno}}" value="{{data.empno}}" formControlName="empno" >
+      </div>
+    <div class="mb-2">
+        <label for="exampleInputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" placeholder="{{data.name}}" value="{{data.empno}}" formControlName="name">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{data.email}}"  value="{{data.empno}}"formControlName="email"  >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputSalary" class="form-label">Salary</label>
+      <input type="number" class="form-control" id="exampleInputSalary" placeholder="{{data.salary}}" value="{{data.empno}}" formControlName="salary">
+    </div>
+  <div>
+    <button (click)="updateValue(data.id)">update</button>
+  </div>
+    
+  </form>
+  

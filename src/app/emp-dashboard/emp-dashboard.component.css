@@ -1,0 +1,61 @@
+/* nav */
+.nav
+{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1
+{
+    margin-left: 200px;
+    color: aliceblue;
+}
+.btn
+{
+    margin-right: 100px;
+    
+}
+#btnNav
+{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: azure;
+}
+/* nav end */
+
+table {
+    width: 100%;
+  }
+
+  /* Table */
+  .table
+  {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+   
+    
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  
+  /* btns */
+button
+{
+    background-color: aquamarine;
+}
+.tbtn
+{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
